@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "萤火虫小程序商城",
+  "navigationBarBackgroundColor": "#008000",
+  "navigationBarTextStyle": "white"
+  
 }
