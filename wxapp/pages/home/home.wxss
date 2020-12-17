@@ -1,1 +1,126 @@
-/* pages/home/home.wxss */
+.homeroot{
+  background-color: #f2f2f3;
+}
+.inputwrap{
+  padding: 20rpx;
+  position: relative;
+}
+.inputbox{
+  background-color:  white;
+  
+  text-align: center;
+}
+.please_input{
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 10rpx 0;
+}
+.icojing{
+  position: absolute;
+  left: 440rpx;
+  top: 30rpx;
+}
+/* 轮播 */
+swiper{
+  width: 100%;
+  height: 500rpx;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+/* 商品推荐 */
+.goodrecommbox{
+  background-color: white;
+  margin-top: 20rpx;
+  /* background-color: hotpink; */
+  height: 200px;
+}
+.goodrecomm{
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+.sale_img{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.goods_name{
+       overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+        width: 130rpx;
+
+}
+.goods_price{
+  color: red;
+}
+.sale_imgbox{
+  border: 0.5px solid gray;
+  width: 155rpx;
+  height: 155rpx;
+}
+.newwrapp{
+  width: 150rpx;
+  height: 100rpx;
+}
+
+
+/* ca猜你喜欢 */
+.youlike{
+  background-color: #f2f2f3;
+}
+.cai_title{
+  text-align: center;
+  position: relative;
+  background-color: #f2f3f2;
+  width: 100%;
+  height: 100rpx;
+}
+.cai_line{
+  height: 0;
+  width: 80%;
+  border: 0.5px solid gray;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.cai_word{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:-15rpx ;
+  text-align: center;
+  vertical-align: middle;
+ 
+  margin: auto;
+  width: 200rpx;
+  background-color: #f2f3f2; 
+  z-index: 5;
+}
+
+.cai_cont{
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+  
+ 
+  height: 2020rpx;
+}
+.cai_cont_item{
+  width: 360rpx;
+  /* height: 420rpx; */
+  background-color: white;
+}
+.cai_img{
+  width: 100%;
+  height: 300rpx;
+}

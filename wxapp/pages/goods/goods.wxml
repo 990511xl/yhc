@@ -1,0 +1,76 @@
+<view>
+  <scroll-view scroll-top="{{scrollTop}}" class="goodroot" scroll-y="true" bindscroll="scroll">
+    <!-- banner轮播 -->
+    <swiper bindchange="swiperChange" indicator-dots='true' indicator-color='white' indicator-active-color='black'
+      autoplay='true' circular="true">
+      <swiper-item wx:for="{{detailobj.image}}" wx:key="imgarr">
+        <image src='{{item.file_path}}'></image>
+      </swiper-item>
+    </swiper>
+    <view class="swiperpage">
+      <text class="cuurrpage">{{swiperCurrent}} /</text>
+      <text>{{detailobj.image.length}}</text>
+    </view>
+    <!-- 轮播图下信息 -->
+    <view class="detailinfo">
+      <view>{{detailobj.goods_name}}</view>
+      <view>
+        <text class="detailprice">￥{{detailobj.spec[0].goods_price}}</text>
+        <text class="detailold">￥{{detailobj.spec[0].line_price}}</text>
+      </view>
+      <view class="liang">
+        <text>销量:{{detailobj.spec[0].goods_sales}}</text>
+        <text>库存:{{detailobj.spec[0].stock_num}}</text>
+      </view>
+    </view>
+    <!-- 折叠按钮 -->
+    <view class="zhediewrap">
+      <view class="zhedietop">
+        <view> <text>已选</text>
+          <text style="margin-left:20rpx">{1个}</text></view>
+
+        <view bindtap="showinfo" >
+          <i-icon type="{{isshow ? 'packup' : 'unfold'}}"/>
+        </view>
+      </view>
+      <!-- 加减 -->
+      <view wx:if="{{isshow}}">
+        <view class="buycount">购买数量</view>
+        <i-panel >
+          <view style="padding: 16px">
+            <i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
+          </view>
+        </i-panel>
+      </view>
+
+    </view>
+    <!-- 商品描述 -->
+    <view class="goodinfo">
+      <view style="padding:20rpx 0">商品描述</view>
+      <view>
+        <rich-text class="allAnswer"  nodes='{{detailobj.content}}'></rich-text>
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <!-- 返回顶部 -->
+  <view class="backtop" wx:if="{{backding}}">
+    <van-icon name="back-top" color="gray" size="100rpx" class="backimg" bindtap="backf"/>
+  </view>
+  
+  <!-- 底部 -->
+  <view class="deteil_bott">
+    <view class="kefu">
+      <i-icon color="#707070" size="40" type="customerservice" />
+    </view>
+
+    <view class="gouwuche">
+      <i-icon size="40" color="#707070" type="publishgoods_fill" />
+    </view>
+
+    <view class="addcart">加入购物车</view>
+    <view class="noebuy">立即购买</view>
+  </view>
+
+</view>

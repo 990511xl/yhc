@@ -1,2 +1,52 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<scroll-view class="homeroot" bindscroll="scroll">
+<!-- 搜索 -->
+  <view class="inputwrap">
+    <view class="inputbox">
+        <view class="please_input">搜索商品</view>
+        <i-icon class="icojing"  type="search"></i-icon>
+    </view>
+  </view>
+  <!-- banner轮播 -->
+  <swiper indicator-dots='true' indicator-color='white' indicator-active-color='black' autoplay='true' circular='true'>
+    <swiper-item wx:for="{{imgarr}}" wx:key="imgarr">
+      <image src='{{item.imgUrl}}'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 商品推荐 -->
+  <view class="goodrecommbox">
+      <view class="goodrecomm">商品推荐</view>
+      <!-- 轮播图 -->
+      <swiper display-multiple-items="4" >
+          <swiper-item wx:for="{{newestarr}}" wx:key="goods_id" class="newwrapp" bindtap="togoods" data-goodid="{{item.goods_id}}">
+            
+            <view class="sale_imgbox">
+              <image src='{{item.image[0].file_path}}' class="sale_img"></image>
+            </view>
+
+            <view >
+              <view class="goods_name">{{item.goods_name}}</view>
+              <view class="goods_price">￥{{item.spec[0].goods_price}}</view>
+          </view>
+          </swiper-item>
+      </swiper>
+  </view>
+  <!-- 猜你喜欢 -->
+  <view class="youlike">
+    <!-- 头部 -->
+    <view class="cai_title">
+      <view class="cai_line">
+        <view class="cai_word">猜您喜欢</view>
+      </view>
+    </view>
+    <!-- 内容 -->
+    <view class="cai_cont">
+      <navigator wx:for="{{youlikearr}}" class="cai_cont_item" wx:key="goods_id"  url="../goods/goods?goods_id={{item.goods_id}}">
+          <image src="{{item.image[0].file_path}}" class="cai_img"></image>
+          <view>{{item.goods_name}}</view>
+          <view style="color:red">￥{{item.spec[0].goods_price}}</view>
+      </navigator>
+    </view>
+  </view>
+  
+
+</scroll-view>

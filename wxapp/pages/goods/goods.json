@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-icon":"../../dist/icon/index",
+    "i-input-number": "../../dist/input-number/index",
+    "van-icon": "../../vant_dist/icon/index"
+  },
+  "navigationBarTitleText": "商品详情"
+
+}
