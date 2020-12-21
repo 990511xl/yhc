@@ -1,0 +1,109 @@
+.header_sou{
+ 
+  border-bottom: 1px solid #eee;
+}
+.header_sou_cont{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 30rpx;
+}
+.inputwrap{
+  padding: 20rpx;
+  position: relative;
+  flex: 80%;
+}
+.inputbox{
+  background-color:  #f2f2f3;
+  width:100% ;
+  border-radius: 30rpx;
+  text-align: center;
+}
+.please_input{
+  background-color: #f2f2f3;
+  border-radius: 30rpx;
+  padding: 10rpx 0;
+  padding-left:70rpx ;
+  width: 430rpx;
+  text-align: left;
+}
+.icojing{
+  position: absolute;
+  left:50rpx;
+  top: 30rpx;
+}
+.list{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+.list view{
+  flex: 33.3%;
+  /* background-color: green; */
+  text-align: center;
+  padding: 30rpx 0;
+}
+.colo{
+  color: red;
+}
+.up_down{
+  position: absolute;
+  width: 40rpx;
+  height: 60rpx;
+  top: 180rpx;
+  right: 40rpx;
+}
+.one_ico{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.two_ico{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.shu_item{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.meige{
+  width: 370rpx;
+  background-color: #fff;
+  
+}
+.price1,.price11{
+  color: red;
+}
+.price2,.price21{
+  color: gray;
+  font-size: 30rpx;
+text-decoration: line-through;
+}
+.meige image{
+  width: 320rpx;
+  height: 369rpx;
+}
+
+
+.bott{
+  background-color: #f2f2f3;
+  height: 1000rpx;
+}
+.meige-heng{
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 230rpx;
+}
+.meige-heng image{
+  flex: 30%;
+  height: 230rpx;
+}
+.douprice1{
+  flex: 70%;
+}

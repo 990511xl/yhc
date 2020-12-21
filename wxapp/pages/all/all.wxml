@@ -1,2 +1,39 @@
-<!--pages/all/all.wxml-->
-<text>pages/all/all.wxml</text>
+<view class="allroot">
+  <!-- 搜索 -->
+  <view class="inputwrap">
+    <view class="inputbox">
+      <view class="please_input">搜索商品</view>
+      <i-icon class="icojing" type="search"></i-icon>
+    </view>
+  </view>
+  <!-- 商品 -->
+  <view class="cate_cont">
+    <!-- 左 -->
+    <scroll-view class="cate_left">
+      <view bindtap="getcategory" data-cateid="999" class="{{index1===999?'right_style':''}}">全部商品</view>
+      <view wx:for="{{leftarr}}" wx:key="category_id" class="{{index1 == item.category_id?'right_style':''}}"
+        bindtap="getcategory" data-cateid="{{item.category_id}}">
+        {{item.name}}
+      </view>
+
+
+    </scroll-view>
+    <!-- 右 -->
+    <scroll-view class="cate_right" scroll-y="true">
+
+      <navigator url="../goods/goods?goods_id={{item.goods_id}}"  wx:for="{{rightarr}}" wx:key="goods_name" class="item_box">
+        <image class="item_left" src="{{item.goods_image}}"></image>
+        <view class="item_right">
+          <view>{{item.goods_name}}</view>
+          <view>已售{{item.goods_sales}}件</view>
+          <view>
+            <text>￥{{item.goods_sku.goods_price}}</text>
+            <text>￥{{item.goods_sku.line_price}}</text>
+          </view>
+        </view>
+
+      </navigator>
+
+    </scroll-view>
+  </view>
+</view>

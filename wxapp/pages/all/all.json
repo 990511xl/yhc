@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "Sou":"../components/sou/sou",
+    "i-icon":"../../dist/icon/index"
+  },
   "navigationBarTitleText": "全部商品"
 
 }

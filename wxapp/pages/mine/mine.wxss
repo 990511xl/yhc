@@ -1,1 +1,75 @@
-/* pages/mine/mine.wxss */
+.minecontainer{
+  background-color: #f2f2f3;
+}
+.headerimg{
+  background-color: #ffd700;
+  padding: 30rpx;
+  padding-bottom:80rpx ;
+}
+.user-header-cont{
+  display: flex;
+  align-content: center;
+}
+ .user-header-avatar {
+  display: block;
+  margin-right: 30rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 5rpx solid #fff;
+  overflow: hidden;
+}
+ .user-header-avatar image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.user-header-cont-name{
+  font-size: 32rpx;
+  line-height: 84rpx;
+  padding: 20rpx 0;
+  /* background-color: red; */
+}
+
+/* ------------------------------ */
+.myorder{
+  background-color: white;
+  margin: 0 20rpx;
+  padding: 30rpx;
+  margin-top: -50rpx;
+
+}
+.myorder-bott,.myorder_top{
+  display: flex;
+  justify-content: space-between;
+}
+.myorder_top{
+ border-bottom: 1px solid #eee;
+ padding-bottom:30rpx ;
+}
+.myorder_box{
+  text-align: center;
+  color: gray;
+  font-size: 25rpx;
+}
+.myorder-bott{
+  padding-top:30rpx ;
+}
+/* -------------------------- */
+.menus-list{
+  margin-top: 20rpx;
+}
+.menus-lis-box{
+  padding: 30rpx;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+.menus-lis-item{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+.yesdeng{
+  display: flex;
+}

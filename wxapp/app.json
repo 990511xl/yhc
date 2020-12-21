@@ -4,7 +4,10 @@
     "pages/all/all",
     "pages/cart/cart",
     "pages/mine/mine",
-    "pages/goods/goods"
+    "pages/goods/goods",
+    "pages/login/login",
+    "pages/searchgoods/searchgoods",
+    "pages/shoplist/shoplist"
   ],
   "tabBar": {
     "selectedColor": "#ff0000",

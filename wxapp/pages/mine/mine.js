@@ -1,18 +1,34 @@
 // pages/mine/mine.js
+let App =getApp();
+console.log(App)
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    islogin:false
 
+  },
+  
+  onLogin(){
+    wx.navigateTo({
+      url: '../login/login',
+    });
+    this.setData({
+      islogin:App.checkIsLogin
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(11111111111)
+    console.log(App.checkIsLogin())
+    this.setData({
+      islogin: wx.getStorageSync('token') != "" && wx.getStorageSync('user_id') != ""
+    })
   },
 
   /**
@@ -26,7 +42,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(222222222)
+      console.log(App.checkIsLogin())
+      this.setData({
+        islogin: wx.getStorageSync('token') != "" && wx.getStorageSync('user_id') != ""
+      })
   },
 
   /**

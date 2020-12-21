@@ -26,17 +26,17 @@
     <!-- 折叠按钮 -->
     <view class="zhediewrap">
       <view class="zhedietop">
-        <view> <text>已选</text>
-          <text style="margin-left:20rpx">{1个}</text></view>
+        <view> <text style="backgroundColor:red">已选</text>
+          <text style="margin-left:20rpx">{{value1}}</text></view>
 
-        <view bindtap="showinfo" >
-          <i-icon type="{{isshow ? 'packup' : 'unfold'}}"/>
+        <view bindtap="showinfo">
+          <i-icon type="{{isshow ? 'packup' : 'unfold'}}" />
         </view>
       </view>
       <!-- 加减 -->
       <view wx:if="{{isshow}}">
-        <view class="buycount">购买数量</view>
-        <i-panel >
+        <view class="buycount" style="backgroundColor:red">购买数量</view>
+        <i-panel>
           <view style="padding: 16px">
             <i-input-number value="{{ value1 }}" min="0" max="100" bindchange="handleChange1" />
           </view>
@@ -48,7 +48,7 @@
     <view class="goodinfo">
       <view style="padding:20rpx 0">商品描述</view>
       <view>
-        <rich-text class="allAnswer"  nodes='{{detailobj.content}}'></rich-text>
+        <rich-text class="allAnswer" nodes='{{detailobj.content}}'></rich-text>
       </view>
     </view>
   </scroll-view>
@@ -56,20 +56,47 @@
 
   <!-- 返回顶部 -->
   <view class="backtop" wx:if="{{backding}}">
-    <van-icon name="back-top" color="gray" size="100rpx" class="backimg" bindtap="backf"/>
+    <van-icon name="back-top" color="gray" size="80rpx" class="backimg" bindtap="backf" />
   </view>
-  
+  <!-- 侧边动画 -->
+  <view class="gongju">
+    <view wx:if="{{show}}">
+      <view class="nav_box">
+        <van-icon name="contact" size="25" color="white" style="margin-top:15rpx"/>
+      </view>
+      
+      <view class="nav_box">
+        <van-icon name="apps-o" size="25" color="white" style="margin-top:15rpx"/>
+      </view>
+      
+      <view class="nav_box">
+        <van-icon name="description" size="25" color="white" style="margin-top:15rpx"/>
+
+      </view>
+      
+      <view class="nav_box">
+        <van-icon name="shopping-cart-o" size="25" color="white" style="margin-top:15rpx"/>
+
+      </view>
+      
+    </view>
+    <view bind:tap='dian' class="last_img">
+      <van-icon name="qr" size="25" color="white" style="margin-top:15rpx"/>
+    </view>
+  </view>
   <!-- 底部 -->
   <view class="deteil_bott">
     <view class="kefu">
-      <i-icon color="#707070" size="40" type="customerservice" />
+      <i-icon color="#707070" size="30" type="customerservice" />
     </view>
 
-    <view class="gouwuche">
-      <i-icon size="40" color="#707070" type="publishgoods_fill" />
-    </view>
+    <view class="gouwuche" catchtap="tocart">
+      <van-icon name="shopping-cart-o" color="#707070" size="30" info="{{goucount>0?goucount:''}}" />
 
-    <view class="addcart">加入购物车</view>
+      <!-- <i-icon size="40" color="#707070" type="publishgoods_fill" /> -->
+      </view>
+
+    <view class="addcart" catchtap="addcartf">加入购物车</view>
     <view class="noebuy">立即购买</view>
   </view>
 

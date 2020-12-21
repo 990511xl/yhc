@@ -1,11 +1,12 @@
 <scroll-view class="homeroot" bindscroll="scroll">
 <!-- 搜索 -->
-  <view class="inputwrap">
+  <navigator class="inputwrap" url="../searchgoods/searchgoods">
     <view class="inputbox">
         <view class="please_input">搜索商品</view>
         <i-icon class="icojing"  type="search"></i-icon>
     </view>
-  </view>
+  </navigator>
+
   <!-- banner轮播 -->
   <swiper indicator-dots='true' indicator-color='white' indicator-active-color='black' autoplay='true' circular='true'>
     <swiper-item wx:for="{{imgarr}}" wx:key="imgarr">

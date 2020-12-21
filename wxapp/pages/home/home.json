@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "i-icon":"../../dist/icon/index"
+   
   },
   "navigationBarTitleText": "萤火虫小程序商城",
   "navigationBarBackgroundColor": "#008000",

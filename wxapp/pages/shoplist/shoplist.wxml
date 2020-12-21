@@ -1,0 +1,60 @@
+<view class="shoplist_root">
+  <!-- 头部搜索 -->
+  <view class="header_sou">
+    <view class="header_sou_cont">
+      <navigator class="inputwrap" url="../searchgoods/searchgoods">
+        <view class="inputbox">
+          <view class="please_input">搜索商品</view>
+          <i-icon class="icojing" type="search"></i-icon>
+        </view>
+      </navigator>
+      <van-icon name="qr" bindtap="changeposi" />
+    </view>
+
+  </view>
+
+  <!-- list -->
+  <view class="list">
+    <view data-biao="0" class="{{cuurrnum=='0'?'colo':''}}"  bindtap="changecol" >综合</view>
+    <view data-biao="1" bindtap="changecol" class="{{cuurrnum =='1'?'colo':''}}" >销量</view>
+   
+    <view data-biao="2"  bindtap="changecol" class="{{cuurrnum=='2'?'colo':''}}">
+      价格
+    </view>  
+  </view>
+
+  <view class="up_down">
+        <i-icon color="{{updown==0?'red':''}}" type="packup" class="one_ico" bindtap="upprice"/>
+        <i-icon color="{{updown==1?'red':''}}" type="unfold" class="two_ico" bindtap="downprice"/>
+  </view>
+  <!-- 物品 -->
+  <view class="bott">
+      <view class="shu" wx:if="{{ischange}}">
+          <view class="shu_item"> 
+              <navigator class="meige" url="../goods/goods?goods_id={{item.goods_id}}" wx:for="{{currenitemarr}}" wx:key="index">
+                  <image src="{{item.goods_image}}"></image>
+                  <view>{{item.goods_name}}</view>
+                  <view class="douprice">
+                    <text class="price1">{{item.goods_sku.goods_price}}</text>
+                    <text class="price2">{{item.goods_sku.line_price}}</text>
+                  </view>
+              </navigator>
+          </view>
+      </view>
+      <!-- -------------------------------- -->
+      <view class="heng" wx:else>
+        <view class="heng_item"> 
+              <navigator class="meige-heng" wx:for="{{currenitemarr}}" wx:key="index" url="../goods/goods?goods_id={{item.goods_id}}">
+                  <image src="{{item.goods_image}}"></image>
+                  
+                  <view class="douprice1">
+                    <view>{{item.goods_name}}</view>
+                    <text class="price11">{{item.goods_sku.goods_price}}</text>
+                    <text class="price21" wx:if="{{item.goods_sku.line_price != '0.00'}}">{{item.goods_sku.line_price}}</text>
+                  </view>
+                </navigator>
+          </view>
+      </view>
+  </view>
+
+</view>

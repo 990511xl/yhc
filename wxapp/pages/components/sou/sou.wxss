@@ -1,0 +1,19 @@
+.inputwrap{
+  padding: 20rpx;
+  position: relative;
+}
+.inputbox{
+  background-color:  white;
+  
+  text-align: center;
+}
+.please_input{
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 10rpx 0;
+}
+.icojing{
+  position: absolute;
+  left: 440rpx;
+  top: 30rpx;
+}

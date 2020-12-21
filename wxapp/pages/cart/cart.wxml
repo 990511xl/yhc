@@ -1,2 +1,32 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="cartroot">
+  <scroll-view class="cart_box" wx:for="{{goodlist}}" wx:key="goods_name">
+    <view class="cart_item">
+      <view class="cart_item_left">
+        <image src="{{item.image[0].file_path}}"></image>
+      </view>
+      <view class="cart_item_midd">
+        <view>{{item.goods_name}}</view>
+        <view>{{item.goods_price}}</view>
+
+        <van-stepper value="{{item.total_num}}" data-items="{{item}}"  bind:change="handleChange1" bind:plus="jia" bind:minus="jian"></van-stepper>
+       
+
+      </view>
+      <view class="cart_item_right">
+        <i-icon type="trash" data-items="{{item}}" bindtap="deleitem" />
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 底部 -->
+  <view class="bott">
+    <view class="left-bott">合计:{{allmoney}}元</view>
+    <view class="rigth_bott">去结算</view>
+  </view>
+</view>
+
+
+
+
+
+        
+

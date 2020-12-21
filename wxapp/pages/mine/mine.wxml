@@ -1,2 +1,87 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="minecontainer">
+  <view class="headerimg">
+    <!-- 登录 -->
+    <view class="yesdeng"  wx:if="{{islogin}}">
+      <view class="user-header-avatar">
+          <open-data class="" lang="zh_CN" type="userAvatarUrl"></open-data>
+          
+        </view>
+        <open-data class="user-header-cont-name" lang="zh_CN" type="userNickName"></open-data>
+        
+    </view>
+        <!-- 未登录 -->
+    <view wx:else class="nodeng">
+      <view class="user-header-cont" catchtap="onLogin">
+        <view class="user-header-avatar">
+          <image src="../../tabbaricon/default-avatar.jpg"></image>
+        </view>
+        <view class="user-header-cont-name">点击登录</view>
+      </view>
+    </view>
+  </view>
+  <!-- 我的订单 -->
+  <view class="myorder">
+    <view class="myorder_top">
+      <text>我的订单</text>
+      <view> <text>全部订单 </text> <i-icon type="enter" /></view>
+     
+    </view>
+    <view class="myorder-bott">
+        <view class="myorder_box">
+          <i-icon type="barrage" size="40"/>
+          <view>全部订单</view>
+        </view>
+        <view class="myorder_box">
+          <i-icon type="barrage"  size="40"/>
+          <view>代付款</view>
+        </view>
+        <view class="myorder_box">
+          <i-icon type="barrage"  size="40"/>
+          <view>代发货</view>
+        </view>
+        <view class="myorder_box">
+          <i-icon type="barrage"  size="40"/>
+          <view>待收货</view>
+        </view>
+
+
+    </view>
+  </view>
+     <!-- 菜单列表 -->
+     <view class="menus-list">
+       <view class="menus-lis-box">
+        <view class="menus-lis-item">
+          <view>
+            <i-icon type="customerservice" style="margin-right:20rpx"/>
+            <text>收货地址</text>
+          </view>
+          <i-icon type="enter" />
+        </view>
+       </view>
+        
+       <view class="menus-lis-box">
+        <view class="menus-lis-item">
+          <view>
+            <i-icon type="customerservice" style="margin-right:20rpx"/>
+            <text>我的帮助</text>
+          </view>
+          <i-icon type="enter" />
+        </view>
+       </view>
+
+       <view class="menus-lis-box">
+        <view class="menus-lis-item">
+          <view>
+            <i-icon type="customerservice" style="margin-right:20rpx"/>
+            <text>联系客服</text>
+          </view>
+          <i-icon type="enter" />
+        </view>
+       </view>
+
+       
+ 
+  
+  </view>
+
+</view>

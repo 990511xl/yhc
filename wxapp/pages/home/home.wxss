@@ -1,6 +1,7 @@
 .homeroot{
   background-color: #f2f2f3;
 }
+
 .inputwrap{
   padding: 20rpx;
   position: relative;
@@ -20,6 +21,7 @@
   left: 440rpx;
   top: 30rpx;
 }
+
 /* 轮播 */
 swiper{
   width: 100%;
@@ -124,3 +126,13 @@ swiper image{
   width: 100%;
   height: 300rpx;
 }
+
+::-webkit-scrollbar {
+ 
+  width:0;
+   
+  height:0;
+   
+  color:transparent;
+   
+  }

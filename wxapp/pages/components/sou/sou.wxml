@@ -1,0 +1,7 @@
+<!-- 搜索 -->
+<view class="inputwrap">
+    <view class="inputbox">
+        <view class="please_input">搜索商品</view>
+        <i-icon class="icojing"  type="search"></i-icon>
+    </view>
+  </view>

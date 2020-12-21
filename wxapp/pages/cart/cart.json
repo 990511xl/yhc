@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "i-icon":"../../dist/icon/index",
+    "i-input-number": "../../dist/input-number/index",
+    "van-stepper": "../../vant_dist/stepper/index"
+  },
   "navigationBarTitleText": "购物车"
 }

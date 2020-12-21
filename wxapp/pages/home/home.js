@@ -2,7 +2,7 @@
 import myfetch from "../../api/fetch"
 
 let app = getApp();
- console.log(app.api.baseUrl)
+//  console.log(app.api.baseUrl)
 
 Page({
 
@@ -16,7 +16,7 @@ Page({
   },
   
   togoods(e){
-    console.log(e.currentTarget.dataset)
+    // console.log(e.currentTarget.dataset)
     let item = e.currentTarget.dataset
     wx.navigateTo({
       url: '../goods/goods?goods_id='+item.goodid,
@@ -29,8 +29,8 @@ Page({
    * http://47.105.96.139:8081/index.php?s=/api/index/page&wxapp_id=10001&token=8f7480921b1083b0df0554063b6d62b4
    */
   onLoad: function (options) {
-    myfetch({url:app.api.baseUrl+"/index/page&wxapp_id=10001&token=8f7480921b1083b0df0554063b6d62b4",method:"GET"}).then(res=>{
-      console.log(res.data.data.best);
+    myfetch({url:app.api.baseUrl+"/index/page&wxapp_id=10001",method:"GET"}).then(res=>{
+      // console.log(res.data.data.best);
       this.setData({
         imgarr:res.data.data.items.n606196612728596.data,
         newestarr:res.data.data.newest,

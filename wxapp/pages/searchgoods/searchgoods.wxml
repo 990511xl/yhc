@@ -1,0 +1,20 @@
+<view class="searchgoodsroot">
+    <view class="sego_top">
+      <input type="text"  bindinput="getSearchContent" class="input" focus="true" placeholder="请输入您搜索的商品" placeholder-style="color:#aba9a9" type="text"/>
+
+      <navigator url="../shoplist/shoplist?search={{inputval}}" class="buttons" bindtap="searchbl">搜索</navigator>
+      <i-icon class="icojing"  type="search" size='17'></i-icon>
+    </view>
+    <!-- 历史 -->
+    <view class="sego_bott">
+        <view class="zuijin">
+          <text>最近搜索</text>
+          <i-icon type="trash" size='30' bindtap="delet"/>
+        </view>
+        <view class="hisbox">
+            <view   wx:for="{{histarr}}" wx:key="index" class="hisbox_item" data-curritem="{{item}}" bindtap="itemclick">
+              {{item}}
+            </view>
+        </view>
+    </view>
+</view>

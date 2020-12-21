@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon":"../../vant_dist/icon/index",
+    "i-icon":"../../dist/icon/index"
+  },
+  "navigationBarTitleText": "商品列表"
+}
